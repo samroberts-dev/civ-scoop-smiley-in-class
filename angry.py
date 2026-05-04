@@ -26,12 +26,12 @@ class Angry(Smiley, Blinkable):
         Draws the eyes with subtle angry eyebrows
         :param wide_open (bool): eyes open or closed.
         """
-        eyes = [10, 13, 18, 21]
+        eyes = [18, 21]
         for pixel in eyes:
             self.pixels[pixel] = self.BLANK if wide_open else self.get_complextion()
 
         # Subtle inward eyebrows
-        eyebrows = [9, 14]
+        eyebrows = [9, 10, 13, 14 ]
         for pixel in eyebrows:
             self.pixels[pixel] = self.BLANK
 
