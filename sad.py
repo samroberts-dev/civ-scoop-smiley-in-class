@@ -1,10 +1,10 @@
+import time
 from smiley import Smiley
+from blinkable import Blinkable
 
-
-class Sad(Smiley):
+class Sad(Smiley, Blinkable):
     def __init__(self):
-        super().__init__()
-
+        super().__init__(complextion=self.BLUE)
         self.draw_mouth()
         self.draw_eyes()
 
@@ -26,5 +26,12 @@ class Sad(Smiley):
             if wide_open:
                 eyes = self.BLANK
             else:
-                eyes = self.YELLOW
+                eyes = self.get_complextion()
             self.pixels[pixel] = eyes
+    def blink(self,delay=0.25):
+        self.draw_eyes(wide_open=False)
+        self.show()
+        time.sleep(delay)
+        self.draw_eyes(wide_open=True)
+        self.show()
+        

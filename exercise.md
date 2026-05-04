@@ -25,25 +25,45 @@ Here, you will make some modifications to the provided code.
 
 ### 1
 We would like all of our Smileys to be able to blink.
-1.1: Using `happy.py` as an example, edit `sad.py` so that it can also blink.
+1.1: Using `happy.py` as an example, edit `sad.py` so that it can also blink. 
+> Done
 
-1.2: Rewrite your `main.py`'s main function, so that both smileys are shown.
+1.2: Rewrite your `main.py`'s main function, so that both smileys are shown. 
+> Done
 
 ### 2
 We would like our Smileys to be various colours
-2.1: What class defines the colours?
-2.2: Name all colours
-2.3: Add `BLUE` to Smiley (you may need to read up on the RGB colour model)
+
+2.1: What class defines the colours? 
+> - Smiley 
+
+2.2: Name all colours -- White, Green, Red, Yellow, Blank
+2.3: Add `BLUE` to Smiley (you may need to read up on the RGB colour model) 
+> Done
 ### 3
 3.1: Modify Smiley's constructor, so that it can accept a `complexion` parameter.  This should default to `YELLOW`
-3.2: Set a private instance variable, `self.__complexion` to the complexion parameter.
-3.2: Instead of setting `Y` to `self.YELLOW`, now set `Y` to `self.__complexion`
+> DONE
+
+3.2: Set a private instance variable, `self.__complexion` to the complexion parameter. 
+> DONE
+
+3.2: Instead of setting `Y` to `self.YELLOW`, now set `Y` to `self.__complexion` 
+> DONE
+
 3.3: Add either a @property, or a get_complexion method to Smiley
-3.3: Refactor: everywhere that currently uses `self.YELLOW`, `Smiley` or elsewhere, should now refer to `self.get_complexion()` or `self.complexion`, depending on your solution.
+> DONE
+
+3.4: Refactor: everywhere that currently uses `self.YELLOW`, `Smiley` or elsewhere, should now refer to `self.get_complexion()` or `self.complexion`, depending on your solution.
+> DONE
+
 ### 4
 After all that: let's make our Sad smiley blue.
 4.1: Modify the call to `super().__init__()`, so that it can take the new `self.BLUE` parameter.
+> DONE
+
 4.2: Check that your `Sad` smiley is now blue, and your `Happy` smiley stayed yellow.
+> DONE
+
 ### 5
 Make your own Smiley:
 5.1: Using `Sad` and `Happy` as templates, now define your own `Angry` smiley.  Please make sure that this smiley is `RED` in `complexion`.
@@ -51,14 +71,14 @@ Try using some grid paper and this function to draw something that you find fun:
 
 |     | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0   |     |     |     |     |     |     |     |     |
+| 0   |   -  |     |     |     |     |     |     |   -  |
 | 1   |     |     |     |     |     |     |     |     |
 | 2   |     |     |     |     |     |     |     |     |
 | 3   |     |     |     |     |     |     |     |     |
 | 4   |     |     |     |     |     |     |     |     |
 | 5   |     |     |     |     |     |     |     |     |
 | 6   |     |     |     |     |     |     |     |     |
-| 7   |     |     |     |     |     |     |     |     |
+| 7   |  -   |     |     |     |     |     |     |   -  |
 ```python
 """
   This function takes an x,y coordinate and returns a single number representing that position in a 8x8, zero-indexed grid.
