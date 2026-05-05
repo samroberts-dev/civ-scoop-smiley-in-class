@@ -14,17 +14,17 @@ class Smiley():
         # We have encapsulated the SenseHat object
         self.sense_hat = SenseHat(window_name=self.window_name)
         self.__complexion = complextion
-        Y = self.__complexion
+        X = self.__complexion
         O = self.BLANK
         self.pixels = [
-            O, Y, Y, Y, Y, Y, Y, O,
-            Y, Y, Y, Y, Y, Y, Y, Y,
-            Y, Y, Y, Y, Y, Y, Y, Y,
-            Y, Y, Y, Y, Y, Y, Y, Y,
-            Y, Y, Y, Y, Y, Y, Y, Y,
-            Y, Y, Y, Y, Y, Y, Y, Y,
-            Y, Y, Y, Y, Y, Y, Y, Y,
-            O, Y, Y, Y, Y, Y, Y, O,
+            O, X, X, X, X, X, X, O,
+            X, X, X, X, X, X, X, X,
+            X, X, X, X, X, X, X, X,
+            X, X, X, X, X, X, X, X,
+            X, X, X, X, X, X, X, X,
+            X, X, X, X, X, X, X, X,
+            X, X, X, X, X, X, X, X,
+            O, X, X, X, X, X, X, O,
         ]
 
     def get_complextion(self):
